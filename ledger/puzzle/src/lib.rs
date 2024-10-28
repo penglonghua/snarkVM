@@ -222,6 +222,8 @@ impl<N: Network> Puzzle<N> {
         })
     }
 
+    // [plh] 这个地方是证明者的入口点，os 中从这个地方开始调用,所以 vm 中的 正式代码(不包含测试) 没有任何调用处. 这是必须的.
+    //
     /// Returns a solution to the puzzle.
     pub fn prove(
         &self,
